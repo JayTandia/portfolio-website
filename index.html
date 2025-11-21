@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jay Tandia | Product Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              // Material Design 3 Dark Theme Token Simulation
+              background: '#0f1214', // Very dark neutral
+              'surface': '#1e2124',   // Surface 1
+              'surface-high': '#282b2e', // Surface 2 (Cards)
+              'surface-highlight': '#363a3d', // Hover states
+              
+              primary: '#d0bcff', // Material You Lavender
+              'primary-container': '#4f378b',
+              'on-primary-container': '#eaddff',
+              
+              secondary: '#ccc2dc',
+              'secondary-container': '#4a4458',
+              
+              tertiary: '#efb8c8',
+              'tertiary-container': '#633b48',
+            },
+            borderRadius: {
+              '4xl': '2rem',
+              '5xl': '2.5rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0f1214;
+        color: #e2e8f0;
+        overflow-x: hidden;
+      }
+      
+      /* Subtle noise texture for that "not AI" premium feel */
+      .bg-noise {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.03;
+        z-index: -1;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f1214;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #363a3d;
+        border-radius: 5px;
+        border: 2px solid #0f1214;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4f378b;
+      }
+      
+      ::selection {
+        background: #d0bcff;
+        color: #381e72;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <div class="bg-noise"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
